@@ -22,7 +22,6 @@ vnoremap > >gv
 nnoremap <C-m> :tabnext<CR>
 nnoremap <C-n> :tabprev<CR>
 map <leader>w :w<CR>
-
 nnoremap + ^
 nnoremap ´ $
 nnoremap <C-d> }
@@ -33,6 +32,7 @@ nnoremap <leader><leader> /
 nnoremap gg gd
 nnoremap gt gg
 nnoremap æ ~
+nnoremap <C-l> :nohlsearch<CR>
 
 if has('ide')
     set highlightedyank
@@ -40,7 +40,6 @@ if has('ide')
     set nerdtree
     set which-key
     " set easymotion
-    " set notimeout
     " set sneak
     let g:WhichKey_FontSize = 22
     let g:WhichKey_CommandColor = "#41ead4"
@@ -51,9 +50,9 @@ if has('ide')
     let g:WhichKeyDesc_kj = "kj"
     let g:WhichKeyDesc_ds = "ds"
 
-    map <leader>wv <Action>(SplitVertically)
+    map <leader>wd <Action>(SplitVertically)
     map <leader>ws <Action>(SplitHorizontally)
-    map <leader>wu <Action>(Unsplit)
-    map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+    map <leader>wr <Action>(Unsplit)
+    map <leader>wq <Action>(MoveEditorToOppositeTabGroup)
     map <leader>ww <Action>(CloseEditor)
 endif
