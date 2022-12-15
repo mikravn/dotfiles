@@ -1,4 +1,4 @@
-"C:/users/mikrj/.ideavimrc" "c:/users/mikrj/.vimrc"
+" "C:/users/mikrj/.ideavimrc" "c:/users/mikrj/.vimrc"
 
 set scrolloff=10
 set showmode
