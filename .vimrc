@@ -25,12 +25,11 @@ nnoremap <C-d> }
 nnoremap <C-e> {
 nnoremap { <C-D>
 nnoremap } <C-u>
-nnoremap <leader><leader> /
 nnoremap æ ~
 nnoremap <A-l> :nohlsearch<CR>
+nnoremap <CR> :nohlsearch<CR><CR>
 nnoremap <leader>g gd
 map <C-s> :w<CR>
-nnoremap <CR> :nohlsearch<CR><CR>
 
 if has('ide')
     set highlightedyank
@@ -39,8 +38,8 @@ if has('ide')
     set which-key
     set ideajoin
     set clipboard+=ideaput
-    " set easymotion
-    " set sneak
+    set easymotion
+    set sneak
     let g:WhichKey_FontSize = 22
     let g:WhichKey_CommandColor = "#41ead4"
     let g:WhichKey_PrefixColor = "#f335b2"
@@ -50,14 +49,17 @@ if has('ide')
     let g:WhichKeyDesc_kj = "kj"
     let g:WhichKeyDesc_ds = "ds"
 
+    sethandler <C-w> a:ide
+    sethandler <C-s> a:ide
     map <leader>ww <Action>(SplitVertically)
     map <leader>ws <Action>(SplitHorizontally)
     map <leader>wd <Action>(Unsplit)
     map <leader>we <Action>(MoveEditorToOppositeTabGroup)
     map <leader>wq <Action>(CloseAllEditorsButActive)
     map <leader>x <Action>(QuickJavaDoc)
-    map <leader>F <Action>(FindInPath)
-    map <leader>f <Action>(GotoFile)
+    map <leader>N <Action>(FindInPath)
+    map <leader>n <Action>(GotoFile)
+    map <leader>f <Plug>(easymotion-jumptoanywhere)
     map <leader>a <Action>(GotoAction)
     map <F2> <Action>(RenameElement)
     map <leader>c <Action>(ReformatCode)
@@ -69,17 +71,18 @@ if has('ide')
     map <leader>q <Action>(CommentByLineComment)
     map <leader>ep <Action>(Git.Pull)
     map <leader>eu <Action>(Vcs.UpdateProject)
-    map <leader>ek <Action>(CheckinProject)
-    map <leader>ee <Action>(Vcs.Push)
     map <leader>ef <Action>(Git.Fetch)
     map <leader>eb <Action>(Git.Branches)
     map <leader>em <Action>(git-commit-message-template.SetCommitMessageAction)
+    map <C-k> <Action>(CheckinProject)
+    map <C-S-k> <Action>(Vcs.Push)
     map <leader>s <Action>(ShowIntentionActions)
     map <leader>d <Action>(ShowErrorDescription)
     map <leader>rr <Action>(RunClass)
     map <leader>rd <Action>(DebugClass)
     map <leader>rc <Action>(RunCoverage)
     map <leader>rs <Action>(Stop)
+    map <leader>re <Action>(Rerun)
     map <C-r> <Action>(NextSplitter)
     map <leader>z <Action>(ToggleDistractionFreeMode)
     nnoremap <leader>l :action RecentLocations<CR>
@@ -91,4 +94,5 @@ if has('ide')
     map <c-q> :action HideAllWindows<CR>
     map <C-f> <Action>(Find)
     map <A-e> <Action>(RecentFiles)
+
 endif
