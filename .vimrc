@@ -26,10 +26,12 @@ nnoremap <C-e> {
 nnoremap { <C-D>
 nnoremap } <C-u>
 nnoremap æ ~
+vnoremap æ ~
 nnoremap <A-l> :nohlsearch<CR>
 nnoremap <CR> :nohlsearch<CR><CR>
 nnoremap <leader>g gd
 map <C-s> :w<CR>
+nnoremap Q @q
 
 if has('ide')
     set highlightedyank
@@ -85,14 +87,13 @@ if has('ide')
     map <leader>re <Action>(Rerun)
     map <C-r> <Action>(NextSplitter)
     map <leader>z <Action>(ToggleDistractionFreeMode)
-    nnoremap <leader>l :action RecentLocations<CR>
+    map <leader>l <Action>(RecentLocations)
     map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
-    nnoremap ge :action GotoNextError<CR>
-    nnoremap gE :action GotoPreviousError<CR>
+    map ge <Action>(GotoNextError)
+    map gE <Action>(GotoPreviousError)
     map <F1> <Action>(ManageRecentProjects)
-    map <c-p> :action JumpToLastWindow<CR>
-    map <c-q> :action HideAllWindows<CR>
+    map <c-p> <Action>(JumpToLastWindow)
+    map <c-q> <Action>(HideAllWindows)
     map <C-f> <Action>(Find)
     map <A-e> <Action>(RecentFiles)
-
 endif
