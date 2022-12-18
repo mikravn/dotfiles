@@ -1,2 +1,2 @@
 mklink "C:/users/mikrj/.ideavimrc" "c:/users/mikrj/.vimrc"
-ln -s "/mnt/c/users/miraj/.vimrc" "~/.ideavimrc"
+ln -s "/mnt/c/users/mikrj/.vimrc" "~/.ideavimrc"
