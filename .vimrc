@@ -21,16 +21,16 @@ nnoremap ´ $
 noremap <C-d> 10j
 noremap <C-e> 10k
 map æ ~
-nnoremap <leader>g gd
 nnoremap Q @q
-xnoremap <leader>p "_dP
 nnoremap <C-l> :nohlsearch<CR>:let @/ = ""<CR>
+xnoremap <leader>p "_dP
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 nnoremap <leader>b <C-O>
+nnoremap <leader>g gd
 " WIN emulation
 vnoremap <BS> d
-vnoremap <C-c> "+y
+vnoremap <C-c> "+y']
 vnoremap <C-x> "+x
 vnoremap <C-v> "+y
 map <C-v> "+p
