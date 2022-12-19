@@ -20,11 +20,11 @@ nnoremap + ^
 nnoremap ´ $
 noremap <C-d> 10j
 noremap <C-e> 10k
-nnoremap æ ~
+map æ ~
 nnoremap <leader>g gd
 nnoremap Q @q
 xnoremap <leader>p "_dP
-nnoremap <A-l> :nohlsearch<CR>:let @/ = ""<CR>
+nnoremap <C-l> :nohlsearch<CR>:let @/ = ""<CR>
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 nnoremap <leader>b <C-O>
