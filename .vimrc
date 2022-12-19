@@ -12,30 +12,32 @@ set timeoutlen=2000
 let mapleader = " "
 inoremap jk <Esc>
 inoremap kj <Esc>
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-l> <C-w>l
-nnoremap <C-k> <C-w>k
 vnoremap < <gv
 vnoremap > >gv
 nnoremap <C-m> :tabnext<CR>
 nnoremap <C-n> :tabprev<CR>
 nnoremap + ^
 nnoremap ´ $
-nnoremap <C-d> }
-nnoremap <C-e> {
-nnoremap <A-d> <C-D>
-nnoremap <A-e> <C-u>
-nnoremap { <C-D>
-nnoremap } <C-u>
+noremap <C-d> 10j
+noremap <C-e> 10k
 nnoremap æ ~
-vnoremap æ ~
-nnoremap <A-l> :nohlsearch<CR>
-nnoremap <CR> :nohlsearch<CR><CR>
 nnoremap <leader>g gd
-map <C-s> :w<CR>
 nnoremap Q @q
 xnoremap <leader>p "_dP
+nnoremap <A-l> :nohlsearch<CR>:let @/ = ""<CR>
+nnoremap xo o<Esc>
+nnoremap xO O<Esc>
+nnoremap <leader>b <C-O>
+" WIN emulation
+vnoremap <BS> d
+vnoremap <C-c> "+y
+vnoremap <C-x> "+x
+vnoremap <C-v> "+y
+map <C-v> "+p
+noremap <C-q> <C-V>
+noremap <C-S> :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <Esc>:update<CR>gi
 
 if has('ide')
     " Plugins
@@ -60,13 +62,14 @@ if has('ide')
     sethandler <C-a> a:ide
     sethandler <C-w> a:ide
     sethandler <C-s> a:ide
+    sethandler <A-d> a:ide
     " Buffers
     map <leader>ww <Action>(MoveTabRight)
-    map <leader>we <Action>(SplitVertically)
+    map <leader>wW <Action>(SplitVertically)
     map <leader>ws <Action>(MoveTabDown)
-    map <leader>wd <Action>(SplitHorizontally)
-    map <leader>wx <Action>(Unsplit)
-    map <leader>wc <Action>(MoveEditorToOppositeTabGroup)
+    map <leader>wS <Action>(SplitHorizontally)
+    map <leader>we <Action>(Unsplit)
+    map <leader>wd <Action>(MoveEditorToOppositeTabGroup)
     map <leader>wq <Action>(CloseAllEditorsButActive)
     " IDEA display actions
     map <leader>x <Action>(QuickJavaDoc)
@@ -77,27 +80,29 @@ if has('ide')
     map <F2> <Action>(RenameElement)
     map <leader>c <Action>(ReformatCode)
     map <leader>C <Action>(ShowReformatFileDialog)
-    map <leader>v <Action>(Refactorings.QuickListPopupAction)
-    map <leader>V <Action>(ExtractMethod)
+    map <leader>M <Action>(Refactorings.QuickListPopupAction)
+    map <leader>m <Action>(ExtractMethod)
     map <leader>q <Action>(CommentByLineComment)
     " IDEA navigation
     map <C-r> <Action>(NextSplitter)
-    map <leader>N <Action>(FindInPath)
-    map <leader>n <Action>(GotoFile)
+    map <leader>v <Action>(GotoFile)
     map <leader>f <Plug>(easymotion-jumptoanywhere)
-    map <leader>a <Action>(GotoAction)
     map <leader>l <Action>(RecentLocations)
-    map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+    map <leader>h <Action>(Annotate)
+    map <leader><leader>h <Action>(Vcs.ShowTabbedFileHistory)
     map ge <Action>(GotoNextError)
     map gE <Action>(GotoPreviousError)
+    map <leader>b <Action>(Back)
     map <F1> <Action>(ManageRecentProjects)
     map <c-p> <Action>(JumpToLastWindow)
-    map <c-q> <Action>(HideAllWindows)
+    map <leader>t <Action>(HideAllWindows)<Action>(ActivateProjectToolWindow)
     map <C-f> <Action>(Find)
     map <A-e> <Action>(RecentFiles)
+    map <leader>z <Action>(CollapseRegionRecursively)
+    map <leader>Z <Action>(ExpandRegionRecursively)
     " IDEA debugger
-    map <leader>b <Action>(ToggleLineBreakpoint)
-    map <leader>B <Action>(Debugger.RemoveAllBreakpoints)
+    map <leader>k <Action>(ToggleLineBreakpoint)
+    map <leader>K <Action>(Debugger.RemoveAllBreakpoints)
     map <leader>rr <Action>(RunClass)
     map <leader>rd <Action>(DebugClass)
     map <leader>rc <Action>(RunCoverage)
