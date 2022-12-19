@@ -71,6 +71,7 @@ if has('ide')
     map <leader>we <Action>(Unsplit)
     map <leader>wd <Action>(MoveEditorToOppositeTabGroup)
     map <leader>wq <Action>(CloseAllEditorsButActive)
+    map <C-A-s> <Action>(CloseAllEditorsButActive)
     " IDEA display actions
     map <leader>x <Action>(QuickJavaDoc)
     map <leader>s <Action>(ShowIntentionActions)
