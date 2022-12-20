@@ -10,8 +10,6 @@ set incsearch
 set hlsearch
 set timeoutlen=2000
 let mapleader = " "
-inoremap jk <Esc>
-inoremap kj <Esc>
 vnoremap < <gv
 vnoremap > >gv
 nnoremap <C-m> :tabnext<CR>
@@ -41,6 +39,7 @@ inoremap <C-S> <Esc>:update<CR>gi
 
 if has('ide')
     " Plugins
+    set ideavimsupport=
     set highlightedyank
     set surround
     set nerdtree
@@ -53,6 +52,8 @@ if has('ide')
     sethandler <C-w> a:ide
     sethandler <C-s> a:ide
     sethandler <A-d> a:ide
+    sethandler <C-A-s> a:ide
+    sethandler <A> a:ide
     " Buffers
     map <leader>ww <Action>(MoveTabRight)
     map <leader>wW <Action>(SplitVertically)
