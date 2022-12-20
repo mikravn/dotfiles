@@ -53,7 +53,6 @@ if has('ide')
     sethandler <C-s> a:ide
     sethandler <A-d> a:ide
     sethandler <C-A-s> a:ide
-    sethandler <A> a:ide
     " Buffers
     map <leader>ww <Action>(MoveTabRight)
     map <leader>wW <Action>(SplitVertically)
