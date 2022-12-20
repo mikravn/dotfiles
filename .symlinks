@@ -1,2 +1,3 @@
+// For linking IDEA to normal vimrc, and linking WSL to WIN
 mklink "C:/users/mikrj/.ideavimrc" "c:/users/mikrj/.vimrc"
 ln -s "/mnt/c/users/mikrj/.vimrc" "~/.ideavimrc"
