@@ -12,8 +12,8 @@ set timeoutlen=2000
 let mapleader = " "
 vnoremap < <gv
 vnoremap > >gv
-nnoremap <C-m> :tabnext<CR>
-nnoremap <C-n> :tabprev<CR>
+"nnoremap <C-m> :tabnext<CR>
+"nnoremap <C-n> :tabprev<CR>
 nnoremap + ^
 nnoremap ´ $
 noremap <C-d> 10j
@@ -91,6 +91,7 @@ if has('ide')
     map <A-e> <Action>(RecentFiles)
     map <leader>z <Action>(CollapseRegionRecursively)
     map <leader>Z <Action>(ExpandRegionRecursively)
+    map <leader>a <Action>(QuickImplementations)
     " IDEA debugger
     map <leader>k <Action>(ToggleLineBreakpoint)
     map <leader>K <Action>(Debugger.RemoveAllBreakpoints)
@@ -99,12 +100,13 @@ if has('ide')
     map <leader>rc <Action>(RunCoverage)
     map <leader>rs <Action>(Stop)
     map <leader>re <Action>(Rerun)
+    map <leader>rw <Action>(SwitchCoverage)
+    map <leader>rq <Action>(HideCoverage)
     " IDEA git
     map <leader>ep <Action>(Git.Pull)
     map <leader>eu <Action>(Vcs.UpdateProject)
     map <leader>ef <Action>(Git.Fetch)
     map <leader>eb <Action>(Git.Branches)
-    map <leader>em <Action>(git-commit-message-template.SetCommitMessageAction)
     map <C-k> <Action>(CheckinProject)
     map <C-S-k> <Action>(Vcs.Push)
 endif
