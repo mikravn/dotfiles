@@ -44,20 +44,10 @@ if has('ide')
     set highlightedyank
     set surround
     set nerdtree
-    set which-key
     set ideajoin
     set clipboard+=ideaput
     set easymotion
     set sneak
-    " Which-key
-    let g:WhichKey_FontSize = 22
-    let g:WhichKey_CommandColor = "#41ead4"
-    let g:WhichKey_PrefixColor = "#f335b2"
-    let g:WhichKey_SortOrder = "by_key_prefix_first"
-    let g:WhichKey_DefaultDelay = 600
-    let g:WhichKeyDesc_jk = "jk"
-    let g:WhichKeyDesc_kj = "kj"
-    let g:WhichKeyDesc_ds = "ds"
     " Handlers
     sethandler <C-a> a:ide
     sethandler <C-w> a:ide
