@@ -12,12 +12,12 @@ set timeoutlen=2000
 let mapleader = " "
 vnoremap < <gv
 vnoremap > >gv
-"nnoremap <C-m> :tabnext<CR>
-"nnoremap <C-n> :tabprev<CR>
+nnoremap <C-m> :tabnext<CR>
+nnoremap <C-n> :tabprev<CR>
 nnoremap + ^
 nnoremap ´ $
-noremap <C-d> 10j
-noremap <C-e> 10k
+noremap <C-d> 15j
+noremap <C-e> 15k
 map æ ~
 nnoremap Q @q
 nnoremap <C-l> :nohlsearch<CR>:let @/ = ""<CR>
