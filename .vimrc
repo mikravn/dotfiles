@@ -24,8 +24,10 @@ nnoremap <C-l> :nohlsearch<CR>:let @/ = ""<CR>
 xnoremap <leader>p "_dP
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
-nnoremap <leader>b <C-O>
-nnoremap <leader>g gd
+nnoremap <leader>g <C-O>
+nnoremap gg gd
+nnoremap gw gg
+nnoremap gs G
 " WIN emulation
 vnoremap <BS> d
 vnoremap <C-c> "+ygv<Esc>
@@ -71,8 +73,7 @@ if has('ide')
     map <F2> <Action>(RenameElement)
     map <leader>c <Action>(ReformatCode)
     map <leader>C <Action>(ShowReformatFileDialog)
-    map <leader>n <Action>(Refactorings.QuickListPopupAction)
-    map <leader>m <Action>(ExtractMethod)
+    map <leader>b <Action>(Refactorings.QuickListPopupAction)
     map <leader>q <Action>(CommentByLineComment)
     " IDEA navigation
     map <C-r> <Action>(NextSplitter)
@@ -80,10 +81,9 @@ if has('ide')
     map <leader>f <Plug>(easymotion-jumptoanywhere)
     map <leader>l <Action>(RecentLocations)
     map <leader>h <Action>(Annotate)
-    map <leader><leader>h <Action>(Vcs.ShowTabbedFileHistory)
+    map <leader>i <Action>(Vcs.ShowTabbedFileHistory)
     map ge <Action>(GotoNextError)
     map gE <Action>(GotoPreviousError)
-    map <leader>b <Action>(Back)
     map <F1> <Action>(ManageRecentProjects)
     map <c-p> <Action>(JumpToLastWindow)
     map <leader>t <Action>(HideAllWindows)<Action>(ActivateProjectToolWindow)
@@ -92,7 +92,7 @@ if has('ide')
     map <leader>z <Action>(CollapseRegionRecursively)
     map <leader>Z <Action>(ExpandRegionRecursively)
     map <leader>a <Action>(QuickImplementations)
-    map <leader>G <Action>(GotoImplementation)
+    map gf <Action>(GotoImplementation)
     map gt <Action>(GotoTest)
     " IDEA debugger
     map <leader>k <Action>(ToggleLineBreakpoint)
