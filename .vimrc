@@ -28,7 +28,7 @@ nnoremap <leader>b <C-O>
 nnoremap <leader>g gd
 " WIN emulation
 vnoremap <BS> d
-vnoremap <C-c> "+y']
+vnoremap <C-c> "+ygv<Esc>
 vnoremap <C-x> "+x
 vnoremap <C-v> "+y
 map <C-v> "+p
