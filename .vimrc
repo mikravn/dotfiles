@@ -93,6 +93,7 @@ if has('ide')
     map <leader>Z <Action>(ExpandRegionRecursively)
     map <leader>a <Action>(QuickImplementations)
     map gf <Action>(GotoImplementation)
+    map gr <Action>(GotoSuperMethod)
     map gt <Action>(GotoTest)
     " IDEA debugger
     map <leader>k <Action>(ToggleLineBreakpoint)
