@@ -9,6 +9,7 @@ set smartcase
 set incsearch
 set hlsearch
 set timeoutlen=2000
+set gdefault
 let mapleader = " "
 vnoremap < <gv
 vnoremap > >gv
