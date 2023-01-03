@@ -16,7 +16,6 @@ vnoremap > >gv
 nnoremap <C-m> :tabnext<CR>
 nnoremap <C-n> :tabprev<CR>
 nnoremap + ^
-nnoremap ´ $
 noremap <C-d> 15j
 noremap <C-e> 15k
 map æ ~
@@ -31,14 +30,16 @@ nnoremap gw gg
 nnoremap gs G
 " WIN emulation
 vnoremap <BS> d
-vnoremap <C-c> "+ygv<Esc>
-vnoremap <C-x> "+x
-vnoremap <C-v> "+y
-map <C-v> "+p
+vnoremap <C-X> "+x
+vnoremap <C-C> "+y
+map <C-V> "+gP
+cmap <C-V> <C-R>+
 noremap <C-q> <C-V>
 noremap <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <Esc>:update<CR>gi
+map <Home> ^
+map <End> $
 
 if has('ide')
     " Plugins
