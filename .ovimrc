@@ -11,9 +11,8 @@ nmap <C-l> :nohlsearch<CR>:let @/ = ""<CR>
 nmap <leader>o o<Esc>
 nmap <leader>O O<Esc>
 nmap <leader>g <C-O>
-nmap gg gd
-nmap gw gg
-nmap gs G
+noremap gw gg
+noremap gs G
 " WIN emulation
 map <BS> d
 map <C-x> "+x
@@ -23,3 +22,4 @@ map <C-q> <C-V>
 map <C-s> :update<CR>
 map <Home> ^
 map <End> $
+nmap <C-a> ggVG
