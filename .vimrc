@@ -28,18 +28,26 @@ nnoremap <leader>g <C-O>
 nnoremap gg gd
 nnoremap gw gg
 nnoremap gs G
-" WIN emulation
+
+" WIN Visual
 vnoremap <BS> d
-vnoremap <C-X> "+x
-vnoremap <C-C> "+y
-map <C-V> "+gP
-cmap <C-V> <C-R>+
-noremap <C-q> <C-V>
-noremap <C-S> :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <Esc>:update<CR>gi
+vnoremap <C-x> "+x
+vnoremap <C-c> "+y
+" WIN Insert
+inoremap <C-c> <Esc>
+inoremap <C-v> <Esc>
+" WIN Normal
+nnoremap <C-c> "+yy
+nnoremap <C-v> "+p
+" WIN SAVE
+noremap <C-s> :update<CR>
+inoremap <C-s> <Esc>:update<CR>gi
+vnoremap <C-s> <C-C>:update<CR>
+" WIN HOME/END
 map <Home> ^
 map <End> $
+" WIN REMAP
+noremap <C-q> <C-V>
 
 if has('ide')
     " Plugins
@@ -51,6 +59,7 @@ if has('ide')
     set clipboard+=ideaput
     set easymotion
     set sneak
+    set multicursor
     " Handlers
     sethandler <C-a> a:ide
     sethandler <C-w> a:ide
