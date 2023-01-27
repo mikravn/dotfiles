@@ -28,13 +28,13 @@ nnoremap <leader>g <C-O>
 nnoremap gg gd
 nnoremap gw gg
 nnoremap gs G
-vnoremap p "_dP
 
 " WIN Visual
 vnoremap <BS> d
 vnoremap <C-x> "+x
 vnoremap <C-c> "+ygv<Esc>
 vnoremap <C-v> "_dP
+vnoremap p "_dP
 " WIN Insert
 inoremap <C-c> <Esc>
 inoremap <C-v> <Esc>
