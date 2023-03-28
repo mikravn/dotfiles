@@ -17,6 +17,7 @@ map <Tab> <
 map <Tab> >
 nnoremap <C-m> :tabnext<CR>
 nnoremap <C-r> :tabnext<CR>
+nnoremap <C-R> :tabprev<CR>
 nnoremap <C-n> :tabprev<CR>
 nnoremap + ^
 noremap <C-d> 15j
