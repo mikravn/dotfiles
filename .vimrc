@@ -16,9 +16,9 @@ vnoremap > >gv
 map <Tab> <
 map <Tab> >
 nnoremap <C-m> :tabnext<CR>
-nnoremap <C-r> :tabnext<CR>
-nnoremap <C-R> :tabprev<CR>
 nnoremap <C-n> :tabprev<CR>
+nnoremap <C-r> :tabnext<CR>
+nnoremap <C-t> :tabprev<CR>
 nnoremap + ^
 noremap <C-d> 15j
 noremap <C-e> 15k
