@@ -13,7 +13,10 @@ set gdefault
 let mapleader = " "
 vnoremap < <gv
 vnoremap > >gv
+map <Tab> <
+map <Tab> >
 nnoremap <C-m> :tabnext<CR>
+nnoremap <C-r> :tabnext<CR>
 nnoremap <C-n> :tabprev<CR>
 nnoremap + ^
 noremap <C-d> 15j
@@ -89,7 +92,7 @@ if has('ide')
     map <leader>b <Action>(Refactorings.QuickListPopupAction)
     map <leader>q <Action>(CommentByLineComment)
     " IDEA navigation
-    map <C-r> <Action>(NextSplitter)
+    map <C-.> <Action>(NextSplitter)
     map <leader>v <Action>(GotoFile)
     map <leader>f <Plug>(easymotion-jumptoanywhere)
     map <leader>l <Action>(RecentLocations)
