@@ -15,8 +15,6 @@ vnoremap < <gv
 vnoremap > >gv
 map <Tab> <
 map <Tab> >
-nnoremap <C-m> :tabnext<CR>
-nnoremap <C-n> :tabprev<CR>
 nnoremap <C-r> :tabnext<CR>
 nnoremap <C-t> :tabprev<CR>
 nnoremap + ^
@@ -26,8 +24,8 @@ map æ ~
 nnoremap Q @q
 nnoremap <C-l> :nohlsearch<CR>:let @/ = ""<CR>
 xnoremap <leader>p "_dP
-nnoremap <leader>o o<Esc>
-nnoremap <leader>O O<Esc>
+noremap <C-> o<Esc>
+noremap <C-n> O<Esc>
 nnoremap <leader>g <C-O>
 nnoremap gg gd
 nnoremap gw gg
@@ -120,6 +118,7 @@ if has('ide')
     map <leader>rc <Action>(RunCoverage)
     map <leader>rs <Action>(Stop)
     map <leader>re <Action>(Rerun)
+    map <leader>rc <Action>(RunToCursor)
     map <leader>rw <Action>(SwitchCoverage)
     map <leader>rq <Action>(HideCoverage)
     " IDEA git
