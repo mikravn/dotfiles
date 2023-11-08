@@ -10,6 +10,7 @@ set incsearch
 set hlsearch
 set timeoutlen=2000
 set gdefault
+set noswapfile
 let mapleader = " "
 vnoremap < <gv
 vnoremap > >gv
@@ -30,6 +31,8 @@ nnoremap <leader>g <C-O>
 nnoremap gg gd
 nnoremap gw gg
 nnoremap gs G
+nnoremap å =
+tnoremap <Esc> <C-\><C-n>
 
 " WIN Visual
 vnoremap <BS> d
