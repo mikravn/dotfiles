@@ -2,7 +2,7 @@ set scrolloff=10
 set showmode
 set showcmd
 set visualbell
-set clipboard+=unnamed
+set clipboard+=unnamedplus
 set number relativenumber
 set ignorecase
 set smartcase
@@ -21,7 +21,7 @@ nnoremap <C-t> :tabprev<CR>
 nnoremap + ^
 noremap <C-d> 15j
 noremap <C-e> 15k
-map æ ~
+map ø ~
 nnoremap Q @q
 nnoremap <C-l> :nohlsearch<CR>:let @/ = ""<CR>
 xnoremap <leader>p "_dP
@@ -31,7 +31,7 @@ nnoremap <leader>g <C-O>
 nnoremap gg gd
 nnoremap gw gg
 nnoremap gs G
-nnoremap å =
+noremap å ==
 tnoremap <Esc> <C-\><C-n>
 
 " WIN Visual
@@ -96,7 +96,6 @@ if has('ide')
     " IDEA navigation
     map <C-.> <Action>(NextSplitter)
     map <leader>v <Action>(GotoFile)
-    map <leader>f <Plug>(easymotion-jumptoanywhere)
     map <leader>l <Action>(RecentLocations)
     map <leader>h <Action>(Annotate)
     map <leader>i <Action>(Vcs.ShowTabbedFileHistory)
