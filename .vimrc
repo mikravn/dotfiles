@@ -83,9 +83,9 @@ if has('ide')
     map <leader>wq <Action>(CloseAllEditorsButActive)
     map <C-A-s> <Action>(CloseAllEditorsButActive)
     " IDEA display actions
-    map <leader>x <Action>(QuickJavaDoc)
+    map <leader>d <Action>(ParameterInfo)
     map <leader>s <Action>(ShowIntentionActions)
-    map <leader>d <Action>(ShowErrorDescription)
+    map <leader>x <Action>(ShowErrorDescription)
     map <leader>z <Action>(ToggleDistractionFreeMode)
     " IDEA code actions
     map <F2> <Action>(RenameElement)
