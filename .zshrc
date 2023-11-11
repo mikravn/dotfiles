@@ -8,7 +8,9 @@ source $HOME/.oh-my-zsh/plugins/fast-syntax-highlighting/fast-syntax-highlightin
 ZSH_THEME="gallois"
 plugins=(
       z
+      git
       zsh-autosuggestions 
+      dirhistory
     )
 source $ZSH/oh-my-zsh.sh
 export EDITOR='nvim'
