@@ -14,25 +14,25 @@ set noswapfile
 let mapleader = " "
 vnoremap < <gv
 vnoremap > >gv
-map <Tab> <
+map <S-Tab> <
 map <Tab> >
 nnoremap <C-r> :tabnext<CR>
 nnoremap <C-t> :tabprev<CR>
 nnoremap + ^
 noremap <C-d> 15j
 noremap <C-e> 15k
-map ø ~
 nnoremap Q @q
 nnoremap <C-l> :nohlsearch<CR>:let @/ = ""<CR>
 xnoremap <leader>p "_dP
-noremap <C-> o<Esc>
 noremap <C-n> O<Esc>
 nnoremap <leader>g <C-O>
 nnoremap gg gd
 nnoremap gw gg
 nnoremap gs G
+noremap ø ~
 noremap å ==
 tnoremap <Esc> <C-\><C-n>
+nnoremap <C-a> ggVG
 
 " WIN Visual
 vnoremap <BS> d
