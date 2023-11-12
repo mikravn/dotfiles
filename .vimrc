@@ -96,7 +96,7 @@ if has('ide')
     " IDEA navigation
     map <leader>f <Action>(GotoFile)
     map <C-.> <Action>(NextSplitter)
-    map <leader>v <Action>(GotoFile)
+    map <leader>v <Action>(NextSplitter)
     map <leader>l <Action>(RecentLocations)
     map <leader>h <Action>(Annotate)
     map <leader>i <Action>(Vcs.ShowTabbedFileHistory)
