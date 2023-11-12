@@ -94,6 +94,7 @@ if has('ide')
     map <leader>b <Action>(Refactorings.QuickListPopupAction)
     map <leader>q <Action>(CommentByLineComment)
     " IDEA navigation
+    map <leader>f <Action>(GotoFile)
     map <C-.> <Action>(NextSplitter)
     map <leader>v <Action>(GotoFile)
     map <leader>l <Action>(RecentLocations)
