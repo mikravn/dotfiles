@@ -55,6 +55,7 @@ map <Home> ^
 map <End> $
 " WIN REMAP
 noremap <C-q> <C-V>
+nnoremap <f1> <C-]>
 
 if has('ide')
     " Plugins
