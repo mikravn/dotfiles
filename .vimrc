@@ -12,6 +12,7 @@ set timeoutlen=2000
 set gdefault
 set noswapfile
 let mapleader = " "
+let sneak#s_next = 1
 vnoremap < <gv
 vnoremap > >gv
 map <S-Tab> <
