@@ -29,7 +29,7 @@ nnoremap <leader>g <C-O>
 nnoremap gg gd
 nnoremap gw gg
 nnoremap gs G
-noremap ø ~
+noremap æ ~
 noremap å ==
 tnoremap <Esc> <C-\><C-n>
 nnoremap <C-a> ggVG
