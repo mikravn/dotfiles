@@ -22,3 +22,4 @@ export EDITOR=nvim
 alias w=nvim
 alias ww='nvim .'
 cd ~
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
