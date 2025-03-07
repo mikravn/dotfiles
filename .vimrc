@@ -11,6 +11,7 @@ set hlsearch
 set timeoutlen=2000
 set gdefault
 set noswapfile
+set noexpandtab
 let mapleader = " "
 vnoremap < <gv
 vnoremap > >gv
